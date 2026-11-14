@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Search Authority Record",
+  "type": "object",
+  "required": ["agent_role", "search_purpose", "policy", "use_boundary", "review"],
+  "properties": {
+    "agent_role": {"type": "string", "minLength": 1},
+    "search_purpose": {"type": "string", "minLength": 1},
+    "policy": {"type": "object", "required": ["allowed_source_types", "data_restrictions"], "properties": {"allowed_source_types": {"type": "array", "items": {"type": "string"}}, "excluded_domains": {"type": "array", "items": {"type": "string"}}, "data_restrictions": {"type": "string"}, "budget_limit": {"type": "string"}}},
+    "evidence": {"type": "array", "items": {"type": "object", "required": ["url", "retrieved_at"], "properties": {"url": {"type": "string", "format": "uri"}, "retrieved_at": {"type": "string", "format": "date-time"}, "claim_used": {"type": "string"}}}},
+    "use_boundary": {"type": "string", "enum": ["inform", "draft", "recommend", "execute_with_approval"]},
+    "review": {"type": "object", "required": ["owner", "correction_route"], "properties": {"owner": {"type": "string"}, "approval_condition": {"type": "string"}, "correction_route": {"type": "string"}, "retention": {"type": "string"}}}
+  },
+  "additionalProperties": false
+}

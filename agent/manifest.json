@@ -1,0 +1,9 @@
+{
+  "name": "search-authority-record",
+  "version": "1.0.0",
+  "canonical_article_url": "https://ankitkumar3514.substack.com/p/web-search-authority-record",
+  "public_repo_url": "https://github.com/ankitforce/search-authority-record",
+  "read_order": ["README.md", "checklists/search-authority-review.md", "schemas/search-authority-record.schema.json", "templates/search-authority-record.example.json", "agent/tasks.md"],
+  "allowed_tasks": ["draft a record", "validate a record", "identify missing controls"],
+  "safety_boundaries": ["never include credentials or personal data", "do not treat retrieval as verification", "do not perform external actions beyond the record's use boundary"]
+}

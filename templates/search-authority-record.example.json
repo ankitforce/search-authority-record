@@ -1,0 +1,13 @@
+{
+  "agent_role": "Procurement research assistant",
+  "search_purpose": "Find current first-party supplier policy pages for a buyer's review.",
+  "policy": {
+    "allowed_source_types": ["first-party supplier documentation", "regulatory sources"],
+    "excluded_domains": ["unverified reposts"],
+    "data_restrictions": "Do not submit buyer, supplier, or contract confidential information in queries.",
+    "budget_limit": "Ten queries per request."
+  },
+  "evidence": [{"url": "https://example.com/policy", "retrieved_at": "2026-11-14T17:00:00Z", "claim_used": "Supplier policy page requires a buyer review before recommendation."}],
+  "use_boundary": "recommend",
+  "review": {"owner": "Named procurement buyer", "approval_condition": "Conflicting or material policy evidence requires buyer review.", "correction_route": "Attach the corrected first-party source and notify the buyer.", "retention": "Keep the record with the procurement decision."}
+}
